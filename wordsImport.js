@@ -179,4 +179,4 @@ function all(number, letter, firstLetter, ifRepeted) {
 }
 all([3, 5], 'ć,m,a,i', 'ć', true);
 
-// all(ilość liter w słowie, literki, pierwsza litera, czy może być powtórzenie liter)
+// all(ilość liter w słowie, literki(puste wypluwa od 3 do 8), pierwsza litera, czy może być powtórzenie liter)
