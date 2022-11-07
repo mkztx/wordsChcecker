@@ -177,6 +177,10 @@ function all(number, letter, firstLetter, ifRepeted) {
 	}
 	console.log(selectedWords);
 }
-all([3, 5], 'ć,m,a,i', 'ć', true);
+
+//TODO: option to select place that letter must be in,
+// input of place and letter, posibility to select more than one letter
+
+all([4], 'e,z,o,k,c,l', undefined, false);
 
 // all(ilość liter w słowie, literki(puste wypluwa od 3 do 8), pierwsza litera, czy może być powtórzenie liter)
