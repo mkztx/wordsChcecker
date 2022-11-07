@@ -1,17 +1,3 @@
-// const http = require('http');
-
-// const hostname = '127.0.0.1';
-// const port = 3000;
-
-// const server = http.createServer((req, res) => {
-// 	res.statusCode = 200;
-// 	res.setHeader('Content-Type', 'text/plain');
-// 	res.end('Hello World');
-// });
-
-// server.listen(port, hostname, () => {
-// 	console.log(`Server running at http://${hostname}:${port}/`);
-// });
 const { readFileSync, promises: fsPromises } = require('fs');
 
 // ✅ read file SYNCHRONOUSLY
@@ -152,7 +138,7 @@ function deleteRepetedLetters(number, letter, starting, ifRepeted) {
 	}
 }
 
-function all(number, letter, firstLetter, ifRepeted) {
+function returnWords(number, letter, firstLetter, ifRepeted) {
 	const selectedWords = [];
 	const ourOutput = [];
 	if (number == undefined) {
@@ -175,12 +161,48 @@ function all(number, letter, firstLetter, ifRepeted) {
 			selectedWords.push(ourOutput[i][n]);
 		}
 	}
-	console.log(selectedWords);
+	// console.log(selectedWords);
+	return selectedWords;
 }
 
-//TODO: option to select place that letter must be in,
-// input of place and letter, posibility to select more than one letter
+function selectWordsWithLettersOnSelectedPlaces(
+	number,
+	letter,
+	firstLetter,
+	ifRepeted,
+	arrayOfNumbersAndLetters
+) {
+	var ourWords = returnWords(number, letter, firstLetter, ifRepeted);
+	var outputWords = [];
+	if (arrayOfNumbersAndLetters != undefined) {
+		for (let i = 0; i < ourWords.length; i++) {
+			var word = ourWords[i];
+			var letter = arrayOfNumbersAndLetters[0];
+			var place = arrayOfNumbersAndLetters[1];
+			if (word.charAt(place) == letter) {
+				outputWords.push(word);
+			}
+		}
+	} else {
+		console.log(ourWords);
+	}
+	console.log(outputWords);
+}
 
-all([4], 'e,z,o,k,c,l', undefined, false);
+// all([5, 6, 7, 8], 'o,g,n,i,r,e', undefined, false);
 
-// all(ilość liter w słowie, literki(puste wypluwa od 3 do 8), pierwsza litera, czy może być powtórzenie liter)
+// all(ilość liter w słowie, literki(puste wypluwa od 3 do 8), pierwsza litera, czy może być powtórzenie liter,litery i miejsca na których mają być)
+
+var numbers = [5, 6, 7, 8];
+var letter = 'o,g,n,i,r,e';
+var firstLetter = undefined;
+var ifRepeted = false;
+var arrayOfNumbersAndLetters = ['o', 0];
+
+selectWordsWithLettersOnSelectedPlaces(
+	numbers,
+	letter,
+	firstLetter,
+	ifRepeted,
+	arrayOfNumbersAndLetters
+);
