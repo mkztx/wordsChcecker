@@ -67,7 +67,6 @@ function selectOnlyWordsWithGivenLetters(number, letter) {
 	//TODO ERROR WHEN REPEATING LETTERS
 
 	var selectedWords = [];
-
 	var ourLetters = letter.split(',');
 	getAllWordsWithNumberOfLetters(number, letter);
 	//split word from gotten array, check if letter is from given letters, if no break, else continue
@@ -169,10 +168,15 @@ function selectWordsWithLettersOnSelectedPlaces(
 	number,
 	letter,
 	firstLetter,
-	ifRepeted,
 	arrayOfNumbersAndLetters
 ) {
-	var ourWords = returnWords(number, letter, firstLetter, ifRepeted);
+	var letters = [...new Set(letter)].toString(',');
+	var ourWords = returnWords(
+		number,
+		letters,
+		firstLetter,
+		checkForRepeated(letter)
+	);
 	var outputWords = [];
 	if (arrayOfNumbersAndLetters != undefined) {
 		for (let i = 0; i < ourWords.length; i++) {
@@ -189,20 +193,26 @@ function selectWordsWithLettersOnSelectedPlaces(
 	console.log(outputWords);
 }
 
+function checkForRepeated(letter) {
+	if ([...new Set(letter)].length == letter.length) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
 // all([5, 6, 7, 8], 'o,g,n,i,r,e', undefined, false);
 
 // all(ilość liter w słowie, literki(puste wypluwa od 3 do 8), pierwsza litera, czy może być powtórzenie liter,litery i miejsca na których mają być)
 
 var numbers = [5, 6, 7, 8];
-var letter = 'o,g,n,i,r,e';
+var letters = 'ognire';
 var firstLetter = undefined;
-var ifRepeted = false;
 var arrayOfNumbersAndLetters = ['o', 0];
 
 selectWordsWithLettersOnSelectedPlaces(
 	numbers,
-	letter,
+	letters,
 	firstLetter,
-	ifRepeted,
 	arrayOfNumbersAndLetters
 );
