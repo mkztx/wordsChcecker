@@ -1,3 +1,17 @@
+// const http = require('http');
+
+// const hostname = '127.0.0.1';
+// const port = 3000;
+
+// const server = http.createServer((req, res) => {
+// 	res.statusCode = 200;
+// 	res.setHeader('Content-Type', 'text/plain');
+// 	res.end('Hello World');
+// });
+
+// server.listen(port, hostname, () => {
+// 	console.log(`Server running at http://${hostname}:${port}/`);
+// });
 const { readFileSync, promises: fsPromises } = require('fs');
 
 // ✅ read file SYNCHRONOUSLY
@@ -164,3 +178,5 @@ function all(number, letter, firstLetter, ifRepeted) {
 	console.log(selectedWords);
 }
 all([3, 5], 'ć,m,a,i', 'ć', true);
+
+// all(ilość liter w słowie, literki, pierwsza litera, czy może być powtórzenie liter)
