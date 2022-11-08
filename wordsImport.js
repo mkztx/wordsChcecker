@@ -203,12 +203,12 @@ function checkForRepeated(letter) {
 
 // all([5, 6, 7, 8], 'o,g,n,i,r,e', undefined, false);
 
-// all(ilość liter w słowie, literki(puste wypluwa od 3 do 8), pierwsza litera, czy może być powtórzenie liter,litery i miejsca na których mają być)
+// all(ilość liter w słowie, literki(puste wypluwa od 3 do 8), pierwsza litera, litery i miejsca na których mają być)
 
-var numbers = [5, 6, 7, 8];
-var letters = 'ognire';
-var firstLetter = undefined;
-var arrayOfNumbersAndLetters = ['o', 0];
+var numbers = undefined;
+var letters = 'rantus';
+var firstLetter = 't';
+var arrayOfNumbersAndLetters = undefined;
 
 selectWordsWithLettersOnSelectedPlaces(
 	numbers,
