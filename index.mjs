@@ -1,4 +1,4 @@
-const { readFileSync, promises: fsPromises } = require('fs');
+import { readFileSync } from 'fs';
 
 // ✅ read file SYNCHRONOUSLY
 function syncReadFiles(letter) {
@@ -205,14 +205,16 @@ function checkForRepeated(letter) {
 
 // all(ilość liter w słowie, literki(puste wypluwa od 3 do 8), pierwsza litera, litery i miejsca na których mają być)
 
-var numbers = undefined;
-var letters = 'rantus';
-var firstLetter = 't';
-var arrayOfNumbersAndLetters = undefined;
+// var numbers = undefined;
+// var letters = 'rantus';
+// var firstLetter = 't';
+// var arrayOfNumbersAndLetters = undefined;
 
-selectWordsWithLettersOnSelectedPlaces(
-	numbers,
-	letters,
-	firstLetter,
-	arrayOfNumbersAndLetters
-);
+// selectWordsWithLettersOnSelectedPlaces(
+// 	numbers,
+// 	letters,
+// 	firstLetter,
+// 	arrayOfNumbersAndLetters
+// );
+
+export default selectWordsWithLettersOnSelectedPlaces;
