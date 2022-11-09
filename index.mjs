@@ -187,10 +187,10 @@ function selectWordsWithLettersOnSelectedPlaces(
 				outputWords.push(word);
 			}
 		}
+		console.log(outputWords);
 	} else {
 		console.log(ourWords);
 	}
-	console.log(outputWords);
 }
 
 function checkForRepeated(letter) {
