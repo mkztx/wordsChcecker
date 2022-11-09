@@ -1,6 +1,6 @@
 function liczenieliter(string) {
 	console.log(
-		`SPELLED WORD:\nlength: ${string.length},\nLetters: "${[
+		`\nSPELLED WORD:\nlength: ${string.length},\nLetters: "${[
 			...new Set(string),
 		].join(',')}",\nfirst letter: "${string.charAt(0)}"`
 	);
