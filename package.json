@@ -1,0 +1,20 @@
+{
+  "name": "wordschecker",
+  "version": "1.0.0",
+  "description": "9.11.2022 - For the moment only program to check words, site will come later becouse its harder than i thought",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcinLitwin/wordsChcecker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcinLitwin/wordsChcecker/issues"
+  },
+  "homepage": "https://github.com/MarcinLitwin/wordsChcecker#readme"
+}

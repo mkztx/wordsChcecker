@@ -217,4 +217,6 @@ function checkForRepeated(letter) {
 // 	arrayOfNumbersAndLetters
 // );
 
+// TODO possibility to select last letter in word, at any length
+
 export default selectWordsWithLettersOnSelectedPlaces;
